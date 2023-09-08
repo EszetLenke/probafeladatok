@@ -1,0 +1,19 @@
+<div class="modal">
+  <div class="keplet">
+    <ion-item> <ion-input type="number" [(ngModel)]="a"></ion-input> </ion-item>
+    <span>x2 </span>
+    <span class="m-5"> +</span>
+    <ion-item>
+      <ion-input type="number" [(ngModel)]="b"></ion-input>
+    </ion-item>
+    <span> x</span>
+
+    <span class="m-5"> +</span>
+    <ion-item> <ion-input type="number" [(ngModel)]="c"></ion-input></ion-item>
+    <div>= 0</div>
+  </div>
+  <div class="modal__btn">
+    <ion-button (click)="calculate()">Számol</ion-button>
+    <ion-button (click)="dismiss()">Mégsem</ion-button>
+  </div>
+</div>

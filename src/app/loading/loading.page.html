@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon
+        name="chevron-back-outline"
+        (click)="goBackUsingBrowserBackButton()"
+      ></ion-icon
+      >Loader</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-progress-bar [value]="progressValue"></ion-progress-bar>
+  <h2 style="text-align: center">Eltelt {{ellapsedTime}} mp</h2>
+
+  <ion-spinner
+    *ngIf="showSpinner"
+    name="circular"
+    color="primary"
+    style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+    "
+  ></ion-spinner>
+</ion-content>

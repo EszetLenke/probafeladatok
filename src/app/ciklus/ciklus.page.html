@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ciklus</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label
+        >Emberek akiknek nincs gyereke: : {{ humansWithoutChildren }}</ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label>Eszter nevű nők száma: {{ eszterWomenCount}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Az átlagéletkor: {{averageAge}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Férfiák százalékos aránya: {{this.malePercentage}}
+        <br />
+        Nők százalékos aránya {{100 - this.malePercentage}}</ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label>Két keresztneves: {{twoFirstNames}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

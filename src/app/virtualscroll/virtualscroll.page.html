@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Virtual Scroll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <cdk-virtual-scroll-viewport
+    itemSize="100"
+    style="height: 100vh; width: 100%"
+    [minBufferPx]="500"
+    [maxBufferPx]="2000"
+  >
+    <ion-card
+      *cdkVirtualFor="let item of itemList; templateCacheSize: 0"
+      style="height: 100px"
+    >
+      <img [src]="item.image" alt="" />
+      <h3>{{ item.text }}</h3>
+    </ion-card>
+  </cdk-virtual-scroll-viewport>
+</ion-content>
